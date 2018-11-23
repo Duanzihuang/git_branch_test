@@ -33,6 +33,18 @@ Git分支演练
     
 2、切出一个新分支
 	git checkout -b v1.0_bugfix_branch
+    
+3、把新分支推动远程仓库，做一个备份
+	git push origin v1.0_bugfix_branch
+    
+4、切回主分支，并且把 v1.0_bugfix_branch 已经修复的代码合并会主分支
+	git checkout master
+    git merge v1.0_bugfix_branch
+    
+    做完这一步，本地的master已经拥有修改之后的代码
+    
+5、把本地的master的代码推送远程仓库的master
+	git push origin master
 
 ```
 
