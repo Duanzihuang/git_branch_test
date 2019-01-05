@@ -13,8 +13,12 @@ Git分支演练
     git add . 把更改的添加到暂存区
 
     git commit -m "注释" 提交到本地仓库
+    
+3、回滚
+	git reset --hard HEAD 回滚最近的一个版本
+   	git reset --hard 版本号 回滚到指定的版本
 
-3、把本地的代码推送到服务器
+4、把本地的代码推送到服务器
     git push origin master -u xxx
 ```
 
