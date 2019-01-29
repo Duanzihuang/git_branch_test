@@ -19,7 +19,13 @@ Git分支演练
    	git reset --hard 版本号 回滚到指定的版本
 
 4、把本地的代码推送到服务器
-    git push origin master -u xxx
+	git push origin master -u xxx
+    
+5、将本地仓库和远程仓库建立关联关系
+	git remote add origin git@gitee.com:manageritcast/pyg_middleware_27.git
+
+6、推送到远程，并且建立跟踪分支
+	git push -u origin master
 ```
 
 ## 有关分支
@@ -43,7 +49,7 @@ Git分支演练
     
 4、切回主分支，并且把 v1.0_bugfix_branch 已经修复的代码合并会主分支
 	git checkout master
-    git merge v1.0_bugfix_branch
+   	git merge v1.0_bugfix_branch
     
     做完这一步，本地的master已经拥有修改之后的代码
     
