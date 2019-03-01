@@ -6,28 +6,28 @@ Git基本操作及Git分支演练
 
 ```javascript
 1、从远程仓库克隆到本地
-	git clone 远程仓库地址
+ git clone 远程仓库地址
 
 2、更改本地代码之后提交相关操作
-	git status 查看本地仓库的状态
+ git status 查看本地仓库的状态
 
-	git add . 把更改的添加到暂存区
+ git add . 把更改的添加到暂存区
 
-	git commit -m "注释" 提交到本地仓库
+ git commit -m "注释" 提交到本地仓库
     
 3、回滚
-	git reset --hard HEAD 回滚最近的一个版本
+ git reset --hard HEAD 回滚最近的一个版本
     
-    git reset --hard 版本号 回滚到指定的版本
+ git reset --hard 版本号 回滚到指定的版本
 
 4、把本地的代码推送到服务器
-	git push origin master -u xxx
+ git push origin master -u xxx
     
 5、将本地仓库和远程仓库建立关联关系
-	git remote add origin git@gitee.com:manageritcast/pyg_middleware_27.git
+ git remote add origin git@gitee.com:manageritcast/pyg_middleware_27.git
 
 6、推送到远程，并且建立跟踪分支
-	git push -u origin master
+ git push -u origin master
 ```
 
 ## git本地仓库添加到远程仓库
@@ -38,21 +38,21 @@ Git基本操作及Git分支演练
 # 切换到要上传的项目的根目录【下面有.git文件】
 
 # 将远程仓库与本地仓库关联
-	git remote add origin git@github.com:Duanzihuang/react_redux_cart.git
+ git remote add origin git@github.com:Duanzihuang/react_redux_cart.git
 
 # 将项目添加到本地仓库
-	git add .
+ git add .
 
 # 提交到本地仓库
-	git commit -m "1-完成了受控组件Checkbox案例"
+ git commit -m "1-完成了受控组件Checkbox案例"
 	
 # 第一次推送【记得加上-u】
 # 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
-	git push -u origin master
+ git push -u origin master
 	
 # 如果发生错误 说明 本地版本和主干上的有差异，你先pull远端的版本，解决了冲突才能push
-	git pull origin master / git pull origin master --allow-unrelated-histories
-	git push -u origin master
+ git pull origin master / git pull origin master --allow-unrelated-histories
+ git push -u origin master
 ```
 
 
@@ -68,22 +68,22 @@ Git基本操作及Git分支演练
 ## Git分支操作
 ```javascript
 1、查看本地有哪些分支
-    git branch
+ git branch
     
 2、切出一个新分支
-	git checkout -b v1.0_bugfix_branch
+ git checkout -b v1.0_bugfix_branch
     
 3、把新分支推动远程仓库，做一个备份
-	git push origin v1.0_bugfix_branch
+ git push origin v1.0_bugfix_branch
     
 4、切回主分支，并且把 v1.0_bugfix_branch 已经修复的代码合并会主分支
-	git checkout master
-	git merge v1.0_bugfix_branch
+ git checkout master
+ git merge v1.0_bugfix_branch
     
-	做完这一步，本地的master已经拥有修改之后的代码
+ 做完这一步，本地的master已经拥有修改之后的代码
     
 5、把本地的master的代码推送远程仓库的master
-	git push origin master
+ git push origin master
 
 ```
 
