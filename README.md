@@ -35,27 +35,27 @@ Git基本操作及Git分支演练
 > 前提：在本地通过 git init 创建好了本地仓库，在远程也建立了远程仓库
 
 ```
-# 切换到要上传的项目的根目录【下面有.git文件】
+1、切换到要上传的项目的根目录【下面有.git文件】
 
-# 将远程仓库与本地仓库关联
+2、将远程仓库与本地仓库关联
  git remote add origin git@github.com:Duanzihuang/react_redux_cart.git
 
-# 将项目添加到本地仓库
+3、将项目添加到本地仓库
  git add .
 
-# 提交到本地仓库
+4、提交到本地仓库
  git commit -m "1-完成了受控组件Checkbox案例"
 	
-# 第一次推送【记得加上-u】
+5、第一次推送【记得加上-u】
 # 由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
  git push -u origin master
 	
-# 如果发生错误 说明 本地版本和主干上的有差异，你先pull远端的版本，解决了冲突才能push
+6、如果发生错误 说明 本地仓库和远程仓库的文件有冲突，你先pull远端的版本，解决了冲突才能push
  git pull origin master / git pull origin master --allow-unrelated-histories
  git push -u origin master
+ 
+7、建议在Github等网站新建仓库的时候，不要勾选README和.gitignore选项，统一由本地生成，这样在建立关联关系的时候就不会有冲突了
 ```
-
-
 
 ## 有关分支
 
@@ -84,7 +84,25 @@ Git基本操作及Git分支演练
     
 5、把本地的master的代码推送远程仓库的master
  git push origin master
+```
 
+##Git分支的其它指令
+
+```
+1、查看远程仓库信息
+ git remote
+ 
+2、查看远程仓库的版本及地址
+ git remote -v
+ 
+3、查看远程仓库的基本信息
+ git remote show origin
+ 
+4、查看本地分支
+ git branch
+ 
+5、查看所有分支【包含远程分支】
+ git branch -a
 ```
 
 ## Git冲突处理
